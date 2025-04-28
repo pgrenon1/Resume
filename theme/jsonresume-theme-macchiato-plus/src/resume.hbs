@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="{{#if resume.meta.language}}{{resume.meta.language}}{{else}}en{{/if}}">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
+  <title>{{#if resume.meta.title}}{{resume.meta.title}}{{else}}{{resume.basics.name}} | {{resume.basics.label}}{{/if}}</title>
+  <meta name="description" content="{{#if resume.meta.description}}{{resume.meta.description}}{{else}}{{resume.basics.name}} - {{resume.basics.label}}{{/if}}">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700,900">
+  {{{ style }}}
+  <script id="resume-data" type="application/json">
+    {{{json resume}}}
+  </script>
+</head>
+
+<body>
+  <div id="debug-panel" class="debug-panel" style="display: none;">
+    <h3>Debug Options</h3>
+    <div class="debug-options">
+      <label><input type="checkbox" id="show-all-projects" checked> Show All Projects</label>
+      <hr>
+      <div class="project-list">
+        <h4>Project Visibility & Order</h4>
+        <div id="project-controls">
+          <!-- Project controls will be added here dynamically -->
+        </div>
+        <button id="copy-order" class="copy-order-btn">Copy Order to Clipboard</button>
+        <div id="copy-status" class="copy-status"></div>
+      </div>
+      <hr>
+      <button id="toggle-debug" class="debug-toggle">Hide Panel</button>
+    </div>
+  </div>
+  <main id="resume" class="page">
+    {{> resume-header}}
+    <div class="resume-content">
+      <aside class="left-column">
+        {{> about }}
+        {{> skills }}
+        {{> languages }}
+        {{> interests }}
+      </aside>
+      <div class="right-column">
+        {{> summary}}
+        {{> work }}
+        {{> education }}
+        {{> certificates }}
+        {{> projects }}
+        {{> volunteer }}
+        {{> awards }}
+        {{> publications }}
+        {{> exhibitions }}
+        {{> references }}
+        {{> relevant-coursework }}
+      </div>
+    </div>
+  </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const debugPanel = document.getElementById('debug-panel');
+      const toggleBtn = document.getElementById('toggle-debug');
+      const showAllProjectsCheckbox = document.getElementById('show-all-projects');
+      const projectControlsContainer = document.getElementById('project-controls');
+      const copyOrderBtn = document.getElementById('copy-order');
+      const copyStatus = document.getElementById('copy-status');
+      let projectItems = [];
+      
+      // Make debug panel toggle function available globally
+      window.toggleDebugPanel = function()
+      {
+        if (debugPanel.style.display === 'none')
+        {
+          debugPanel.style.display = 'block';
+          toggleBtn.textContent = 'Hide Panel';
+        }
+        else
+        {
+          debugPanel.style.display = 'none';
+          toggleBtn.textContent = 'Show Panel';
+        }
+        
+        console.log('Debug panel toggled. Current state:', debugPanel.style.display === 'none' ? 'hidden' : 'visible');
+        return 'Debug panel toggled. Use toggleDebugPanel() to toggle again.';
+      };
+
+      // Toggle debug panel
+      toggleBtn.addEventListener('click', function() {
+        window.toggleDebugPanel();
+      });
+      
+      // Helper function to get numeric year from date string
+      const getYear = function(dateStr) {
+        if (!dateStr) return 0;
+        // Try to extract year from string (assuming format is YYYY or contains YYYY)
+        const match = dateStr.match(/\d{4}/);
+        return match ? parseInt(match[0]) : 0;
+      };
+      
+      // Function to move a project up or down in the order
+      const moveProject = function(index, direction) {
+        const projectContainer = document.querySelector('.project-container');
+        if (!projectContainer) return;
+        
+        // Get current index and target index
+        const currentIndex = parseInt(index);
+        const targetIndex = direction === 'up' ? currentIndex - 1 : currentIndex + 1;
+        
+        // Check if the target index is valid
+        if (targetIndex < 0 || targetIndex >= projectItems.length) {
+          return; // Can't move beyond boundaries
+        }
+        
+        // Swap the elements in the array
+        const temp = projectItems[currentIndex];
+        projectItems[currentIndex] = projectItems[targetIndex];
+        projectItems[targetIndex] = temp;
+        
+        // Rerender the projects in the new order
+        updateProjectsDisplay();
+        
+        // Update the project controls to reflect the new order
+        populateProjectControls();
+      };
+      
+      // Update the display of projects
+      const updateProjectsDisplay = function() {
+        const projectContainer = document.querySelector('.project-container');
+        if (!projectContainer) return;
+        
+        const projectTitle = projectContainer.querySelector('.title');
+        
+        // Clear container and re-append items in current order
+        const fragment = document.createDocumentFragment();
+        fragment.appendChild(projectTitle.cloneNode(true));
+        
+        projectItems.forEach(function(item) {
+          fragment.appendChild(item);
+        });
+        
+        // Clear and repopulate container
+        while (projectContainer.firstChild) {
+          projectContainer.removeChild(projectContainer.firstChild);
+        }
+        
+        projectContainer.appendChild(fragment);
+      };
+      
+      // Populate project controls
+      const populateProjectControls = function() {
+        // Clear existing controls
+        projectControlsContainer.innerHTML = '';
+        
+        // Add controls for each project
+        projectItems.forEach((item, index) => {
+          const projectName = item.getAttribute('data-project-name') || `Project ${index + 1}`;
+          const itemId = `project-${index}`;
+          
+          const controlDiv = document.createElement('div');
+          controlDiv.className = 'project-control';
+          
+          // Checkbox for visibility
+          const checkbox = document.createElement('input');
+          checkbox.type = 'checkbox';
+          checkbox.id = itemId;
+          checkbox.checked = item.style.display !== 'none';
+          checkbox.dataset.index = index;
+          
+          // Add event listener for visibility checkbox
+          checkbox.addEventListener('change', function() {
+            if (this.checked) {
+              projectItems[index].style.display = 'block';
+            } else {
+              projectItems[index].style.display = 'none';
+            }
+          });
+          
+          // Label with project name
+          const label = document.createElement('label');
+          label.htmlFor = itemId;
+          label.title = projectName;
+          label.textContent = ' ' + projectName;
+          
+          // Up button
+          const upBtn = document.createElement('button');
+          upBtn.className = 'move-btn up-btn';
+          upBtn.innerHTML = '&uarr;';
+          upBtn.disabled = index === 0;
+          upBtn.title = 'Move Up';
+          upBtn.dataset.index = index;
+          upBtn.addEventListener('click', function() {
+            moveProject(this.dataset.index, 'up');
+          });
+          
+          // Down button
+          const downBtn = document.createElement('button');
+          downBtn.className = 'move-btn down-btn';
+          downBtn.innerHTML = '&darr;';
+          downBtn.disabled = index === projectItems.length - 1;
+          downBtn.title = 'Move Down';
+          downBtn.dataset.index = index;
+          downBtn.addEventListener('click', function() {
+            moveProject(this.dataset.index, 'down');
+          });
+          
+          // Assemble the control
+          controlDiv.appendChild(checkbox);
+          controlDiv.appendChild(label);
+          controlDiv.appendChild(upBtn);
+          controlDiv.appendChild(downBtn);
+          
+          projectControlsContainer.appendChild(controlDiv);
+        });
+      };
+      
+      // Copy the current project order to clipboard as JSON
+      const copyOrderToClipboard = function() {
+        // Create an array with only the names of visible projects
+        const projectOrder = projectItems
+          .filter(item => item.style.display !== 'none')
+          .map(item => item.getAttribute('data-project-name'));
+        
+        // Convert to JSON
+        const jsonString = JSON.stringify(projectOrder, null, 2);
+        
+        // Copy to clipboard
+        navigator.clipboard.writeText(jsonString)
+          .then(() => {
+            // Show success message
+            copyStatus.textContent = 'Copied!';
+            copyStatus.classList.add('success');
+            
+            // Clear the message after 2 seconds
+            setTimeout(() => {
+              copyStatus.textContent = '';
+              copyStatus.classList.remove('success');
+            }, 2000);
+          })
+          .catch(err => {
+            // Show error message
+            copyStatus.textContent = 'Failed to copy: ' + err;
+            copyStatus.classList.add('error');
+            
+            // Clear the message after 2 seconds
+            setTimeout(() => {
+              copyStatus.textContent = '';
+              copyStatus.classList.remove('error');
+            }, 2000);
+          });
+      };
+      
+      // Show/hide all projects
+      showAllProjectsCheckbox.addEventListener('change', function() {
+        const projectCheckboxes = document.querySelectorAll('#project-controls input[type="checkbox"]');
+        
+        projectCheckboxes.forEach((checkbox, index) => {
+          checkbox.checked = this.checked;
+          
+          if (this.checked) {
+            projectItems[index].style.display = 'block';
+          } else {
+            projectItems[index].style.display = 'none';
+          }
+        });
+      });
+      
+      // Initialize project items array from the DOM
+      const initialSortProjects = function()
+      {
+        const projectContainer = document.querySelector('.project-container');
+        if (!projectContainer) 
+        {
+          return;
+        }
+        
+        // Get all project items (exclude the title element)
+        const allItems = projectContainer.querySelectorAll('.item');
+        if (!allItems || allItems.length === 0) 
+        {
+          console.log('No project items found');
+          return;
+        }
+        
+        // Check if we have a project data array to ensure we have all projects
+        const resumeDataScript = document.getElementById('resume-data');
+        if (resumeDataScript)
+        {
+          try
+          {
+            // Get the raw resume data
+            const resumeData = JSON.parse(resumeDataScript.textContent);
+            
+            // Clear the array and prepare to populate with all projects
+            projectItems = [];
+            
+            if (resumeData.projects && resumeData.projects.length)
+            {
+              // Extract all projects from the resume data
+              resumeData.projects.forEach(function(project) 
+              {
+                // Find the corresponding DOM element if it exists
+                let projectElement = null;
+                for (const item of allItems)
+                {
+                  if (item.getAttribute('data-project-name') === project.name)
+                  {
+                    projectElement = item;
+                    break;
+                  }
+                }
+                
+                // If we found a DOM element, use it
+                if (projectElement)
+                {
+                  projectItems.push(projectElement);
+                }
+                else
+                {
+                  // Create a new DOM element for this project if it doesn't exist yet
+                  const newElement = document.createElement('section');
+                  newElement.className = 'item';
+                  newElement.setAttribute('data-project-name', project.name);
+                  
+                  // Set display none by default for projects not in the DOM
+                  newElement.style.display = 'none';
+                  
+                  if (project.startDate)
+                  {
+                    newElement.setAttribute('data-start-date', project.startDate);
+                  }
+                  
+                  if (project.endDate)
+                  {
+                    newElement.setAttribute('data-end-date', project.endDate);
+                  }
+                  
+                  projectItems.push(newElement);
+                }
+              });
+              
+              return; // We've populated from the resume data
+            }
+          }
+          catch (e)
+          {
+            console.error('Error parsing resume data:', e);
+            // Fall back to DOM-only approach
+          }
+        }
+        
+        // Fall back to DOM-only approach if we don't have resume data
+        projectItems = [];
+        allItems.forEach(function(item) 
+        {
+          // Extract project name from item heading if available
+          const nameElem = item.querySelector('h3');
+          if (nameElem) 
+          {
+            item.setAttribute('data-project-name', nameElem.textContent.trim());
+          }
+          
+          projectItems.push(item);
+        });
+      };
+      
+      // Initialize
+      initialSortProjects();
+      populateProjectControls();
+      
+      // Add event listener for copy button
+      copyOrderBtn.addEventListener('click', copyOrderToClipboard);
+    });
+  </script>
+</body>
+
+</html>

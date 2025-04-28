@@ -1,0 +1,37 @@
+<div class="section-header clearfix">
+    {{#if name}}
+    <h3 class="bold pull-left">
+        {{#if website}}
+            <a href="{{website}}" target="_blank">
+                {{name}}
+                {{#if showWebsite }}
+                    <span class="sublink">· <i class="fa fa-external-link"></i></span>
+                {{/if}}
+            </a>
+        {{else}}
+            {{name}}
+        {{/if}}
+    </h3>
+    {{/if}}
+    <h5 class="italic pull-right">
+        {{#if startDate}}
+            <span class="startDate">{{formatDate startDate}}</span>
+            {{#if endDate}}
+              {{#unless (eq startDate endDate)}}
+                <span class="endDate"> - {{formatDate endDate}}</span>
+              {{/unless}}
+            {{else}}
+              <span class="endDate"> - Present</span>
+            {{/if}}
+        {{else if date}}
+            {{formatDate date}}
+        {{else if releaseDate}}
+            {{formatDate releaseDate}}
+        {{/if}}
+    </h5>
+</div>
+{{#if description}}
+  <h4>
+    {{description}}
+  </h4>
+{{/if}}

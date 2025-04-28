@@ -1,0 +1,8 @@
+{{#if resume.basics.summary}}
+    <div class="container summary-container">
+        {{> title label="summary" value=(getLabel "summary" "Summary")}}
+        <p class="summary">
+            {{resume.basics.summary}}
+        </p>
+    </div>
+{{/if}}

@@ -1,0 +1,35 @@
+{{#if resume.publications.length}}
+<div class="container publications-container">
+    {{> title label="press" value="Press"}}
+
+    {{#each resume.publications}}
+      <section class="item">
+         {{#if url}}
+         <h3 class="bold">
+             <a href="{{url}}" target="_blank">
+                 {{name}}
+                 <span class="sublink">· <i class="fa fa-external-link"></i></span>
+             </a>
+         </h3>
+         {{else}}
+         <h3 class="bold">{{name}}</h3>
+         {{/if}}
+         
+         {{#if publisher}}
+         <h5 class="awarder pull-left">{{publisher}}</h5>
+         {{/if}}
+
+         {{#if releaseDate}}
+         <h5 class="italic pull-right">{{formatDate releaseDate}}</h5>
+         {{/if}}
+
+         <div class="clearfix"></div>
+
+         {{#if summary}}
+         <p class="summary">{{summary}}</p>
+         {{/if}}
+
+      </section>
+    {{/each}}
+</div>
+{{/if}}

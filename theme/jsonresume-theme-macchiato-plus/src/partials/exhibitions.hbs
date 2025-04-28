@@ -1,0 +1,13 @@
+{{#if resume.exhibitions.length}}
+<div class="container exhibitions-container">
+  {{> section-header title="Exhibitions"}}
+  <div class="flex-container">
+    {{#each resume.exhibitions}}
+    <div class="item">
+      <h4 class="bold">{{name}}</h4>
+      <h5>{{date}}</h5>
+    </div>
+    {{/each}}
+  </div>
+</div>
+{{/if}} 
