@@ -20,7 +20,7 @@
       "startDate": "2018",
       "highlights": [
         "Shipped Battle Shapers in Unity",
-        "Developed character mechanics, camera systems and controls, modular roguelike gameplay mechanics",
+        "Developed character, camera and controls systems, modular roguelike gameplay mechanics",
         "Designed, implemented, and maintained several engine and non-engine tools for various pipelines (Art, Animation, Wwise, Dialogue, Localization, Versioning)",
         "Implemented online multiplayer in Unreal Engine as well as the Gameplay Ability System and character custom Movement Modes",
         "Managed complex Git workflows including branching strategies, feature development, and team collaboration"
@@ -306,10 +306,10 @@
     }
   ],
   "projectOrder": [
+    "Unannounced Project",
     "Battle Shapers",
     "Émile et Moi",
     "Collège Saint-Louis - COVID Contact Tracing System",
-    "Unannounced Project",
     "Des Fois J'suis Fâché",
     "Hover",
     "Bullet Command",

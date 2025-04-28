@@ -5,7 +5,7 @@
   "scripts": {
     "init": "npx resumed init resume.json",
     "render": "npx resumed render resume.json --theme jsonresume-theme-macchiato-plus -o resume.html && npx resumed render resume.fr.json --theme jsonresume-theme-macchiato-plus -o resume.fr.html",
-    "export": "npx resumed export resume.json -o resume.pdf"
+    "export": "npx resumed export resume.json -o resume.pdf && npx resumed export resume.fr.json -o resume.fr.pdf"
   },
   "dependencies": {
     "resumed": "latest",
