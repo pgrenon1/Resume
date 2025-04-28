@@ -1,0 +1,383 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Philippe Grenon",
+    "label": "Développeur de Jeux · Programmeur Créatif · Cracheur de Feu",
+    "email": "pgrenon.pg@gmail.com",
+    "phone": "438 491-3055",
+    "summary": "Développeur de jeux vidéo avec une solide expérience en Unity, Unreal Engine et programmation créative",
+    "location": {
+      "address": "7141 12e Avenue",
+      "postalCode": "H2A 2Y1",
+      "city": "Montréal",
+      "region": "QC"
+    }
+  },
+  "work": [
+    {
+      "name": "Metric Empire",
+      "position": "Programmeur Gameplay",
+      "startDate": "2018",
+      "highlights": [
+        "Livrer de Battle Shapers sur Unity",
+        "Responsable des personnages, caméra et contrôles",
+        "Conception et implémentation de plusieurs outils dans et hors moteur pour diverses chaînes de production (Art, Animation, Wwise, Dialogue, Localisation)",
+        "Implémentation du multijoueur en ligne dans Unreal Engine ainsi que du Gameplay Ability System et des modes de mouvement personnalisés"
+      ]
+    },
+    {
+      "name": "Flop Collective",
+      "position": "Coordinateur & Trésorier",
+      "startDate": "2018",
+      "endDate": "2020",
+      "highlights": [
+        "Organisation de rencontres, expositions de jeux, mise en relation de créateurs",
+        "Gestion des finances et partenariats pour un organisme sans but lucratif"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Université de Montréal",
+      "area": "Programmation Appliquée",
+      "studyType": "Certificat",
+      "startDate": "2018",
+      "endDate": "2018"
+    },
+    {
+      "institution": "McGill University",
+      "area": "Études Islamiques & Histoire des Sciences",
+      "studyType": "M.A.",
+      "startDate": "2015",
+      "endDate": "2017",
+      "url": "https://escholarship.mcgill.ca/downloads/pn89d896m?locale=en"
+    },
+    {
+      "institution": "Université de Montréal",
+      "area": "Histoire",
+      "studyType": "B.A.",
+      "startDate": "2012",
+      "endDate": "2015"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Développement de Jeux",
+      "keywords": [
+        "Unity",
+        "C#",
+        "Unreal Engine",
+        "C++",
+        "GAS",
+        "Godot",
+        "GDScript",
+        "3Cs",
+        "Multijoueur en Réseau"
+      ]
+    },
+    {
+      "name": "Programmation Créative",
+      "keywords": [
+        "P5.js",
+        "Node.js",
+        "Arduino",
+        "Python",
+        "Blender",
+        "Aseprite"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Champain",
+      "description": "Football en apesanteur utilisant le téléphone comme manette avec gyroscope et autres capteurs",
+      "keywords": ["Alt-Control", "Godot", "Android Studio", "GDScript", "Kotlin"],
+      "startDate": "2025",
+      "type": "jeu"
+    },
+    {
+      "name": "L'Enfer c'est les autres",
+      "description": "Un simulateur de marche sur ce moment où quelqu'un marche toujours trop lentement devant vous sur le trottoir",
+      "keywords": ["Unreal Engine", "C++"],
+      "startDate": "2024",
+      "type": "jeu"
+    },
+    {
+      "name": "Let 'M Cook",
+      "description": "Un jeu de cuisine multijoueur avec des contrôles twin-stick en vue de dessus",
+      "keywords": ["Unreal Engine", "C++", "GAS"],
+      "startDate": "2024",
+      "type": "jeu"
+    },
+    {
+      "name": "Projet Non Annoncé",
+      "description": "Projet non annoncé de Metric Empire",
+      "keywords": ["Unreal Engine", "C++", "GAS", "3Cs", "Multijoueur en Réseau"],
+      "startDate": "2024",
+      "endDate": "2025",
+      "type": "jeu"
+    },
+    {
+      "name": "Collège Saint-Louis - Système de Traçage COVID",
+      "description": "Développement d'outils backend en Python pour le traçage des contacts pendant la pandémie COVID-19",
+      "keywords": ["Python", "Backend", "Traitement de Données"],
+      "startDate": "2020",
+      "endDate": "2020",
+      "type": "application"
+    },
+    {
+      "name": "Battle Shapers",
+      "description": "FPS roguelite de type boomer shooter",
+      "keywords": ["Unity", "C#", "Cycle de Développement Complet"],
+      "startDate": "2018",
+      "endDate": "2023",
+      "type": "jeu"
+    },
+    {
+      "name": "Émile et Moi",
+      "description": "Jeu de plateforme poétique utilisant des chaînes de Markov",
+      "keywords": ["P5.js", "Node.js", "Traitement et génération de langage", "Bots Twitter/Bluesky"],
+      "startDate": "2019",
+      "endDate": "2025",
+      "type": "jeu"
+    },
+    {
+      "name": "Slingshit",
+      "description": "Jeu de physique avec balancement par câble",
+      "keywords": ["Godot", "C#"],
+      "startDate": "2023",
+      "type": "jeu"
+    },
+    {
+      "name": "Memoir",
+      "description": "Batailles d'arène twin-stick où vous associez des tuiles pour gagner des pouvoirs",
+      "keywords": ["Unity", "C#"],
+      "startDate": "2022",
+      "type": "jeu"
+    },
+    {
+      "name": "The File Explorer",
+      "description": "Aventure textuelle via les dossiers Windows avec fichiers batch interactifs",
+      "keywords": ["Batch Script"],
+      "startDate": "2022",
+      "type": "jeu"
+    },
+    {
+      "name": "Failbot",
+      "description": "Jeu de course à la troisième personne rapide avec logique d'obstacles se réinitialisant",
+      "keywords": ["Unity", "C#"],
+      "startDate": "2021",
+      "type": "jeu"
+    },
+    {
+      "name": "Clitelum",
+      "description": "Jeu de plateforme à la troisième personne où vous contrôlez les deux extrémités d'un ver",
+      "keywords": ["Unity", "C#"],
+      "startDate": "2021",
+      "type": "jeu"
+    },
+    {
+      "name": "Des Fois J'suis Fâché",
+      "description": "FPS où tirer révèle des fragments de poésie québécoise",
+      "keywords": ["Unity", "C#", "Synthèse vocale via Google API", "Blender"],
+      "startDate": "2020",
+      "type": "jeu"
+    },
+    {
+      "name": "Nature Adores a Vacuum",
+      "description": "Simulateur de marche atmosphérique où vous absorbez de la couleur",
+      "keywords": ["Unity", "C#", "Amplify Shader Editor"],
+      "startDate": "2020",
+      "type": "jeu"
+    },
+    {
+      "name": "Off Dimension",
+      "description": "Jeu de tir en arène avec armes basées sur les dimensions",
+      "keywords": ["Unity", "C#"],
+      "startDate": "2020",
+      "type": "jeu"
+    },
+    {
+      "name": "DDND",
+      "description": "Dungeon crawler rythmique où la danse permet de gagner les combats",
+      "keywords": ["Unity", "C#"],
+      "startDate": "2020",
+      "type": "jeu"
+    },
+    {
+      "name": "Rubik-Like",
+      "description": "Roguelike joué sur un cube Rubik",
+      "keywords": ["Unity", "C#"],
+      "startDate": "2020",
+      "type": "jeu"
+    },
+    {
+      "name": "Hover",
+      "description": "Jeu de vol alt-controller avec potentiomètres et interrupteurs Arduino",
+      "keywords": ["Alt-Control", "Arduino", "Unity", "C#", "C", "Blender"],
+      "startDate": "2019",
+      "type": "jeu"
+    },
+    {
+      "name": "Mut8",
+      "description": "Roguelike en terminal avec ECS et conception orientée données",
+      "keywords": ["Python", "Esper ECS", "Graphiques ASCII", "TCOD"],
+      "startDate": "2019",
+      "type": "jeu"
+    },
+    {
+      "name": "G**mba World",
+      "description": "Jeu d'esquive mobile avec classements en ligne",
+      "keywords": ["Unity", "C#", "Classement en ligne avec Google Firebase"],
+      "startDate": "2019",
+      "type": "jeu"
+    },
+    {
+      "name": "Bullet Command",
+      "description": "Shoot 'em up inversé utilisant un panneau de contrôle Arduino personnalisé",
+      "keywords": ["Alt-Control", "Arduino", "Unity", "C#", "C", "Aseprite"],
+      "startDate": "2019",
+      "type": "jeu"
+    },
+    {
+      "name": "Inverted Axis",
+      "description": "Rail shooter avec remappage des contrôles du joystick à chaque tour",
+      "keywords": ["Unity", "C#"],
+      "startDate": "2019",
+      "type": "jeu"
+    },
+    {
+      "name": "Everything Die",
+      "description": "Roguelike de puzzle sur les faces d'un cube",
+      "keywords": ["Unity", "C#", "Blender"],
+      "startDate": "2018",
+      "type": "jeu"
+    },
+    {
+      "name": "La Ligne Pointillée",
+      "description": "Jeu rythmique à thème métro créé pour une installation publique",
+      "keywords": ["Unity", "C#", "Classement en ligne avec Google Firebase"],
+      "startDate": "2018",
+      "type": "jeu"
+    },
+    {
+      "name": "Drunk Dragon",
+      "description": "Jeu de dragon cracheur de feu contrôlé par éthylotest",
+      "keywords": ["Alt-Control", "Arduino", "Unity", "C#"],
+      "startDate": "2018",
+      "type": "jeu"
+    },
+    {
+      "name": "Lost Signals",
+      "description": "Jeu de vignettes multimédia raconté à travers de vieilles télévisions et tourne-disques",
+      "keywords": ["Unity", "C#"],
+      "startDate": "2018",
+      "type": "jeu"
+    },
+    {
+      "name": "Out of the Woods",
+      "description": "Jeu mobile de survie et artisanat sur des tuiles hexagonales",
+      "keywords": ["Unity", "C#", "Blender"],
+      "startDate": "2018",
+      "type": "jeu"
+    }
+  ],
+  "publications": [
+    {
+      "name": "Le Devoir: L'art qui se laisse prendre au jeu",
+      "publisher": "Le Devoir",
+      "releaseDate": "2019",
+      "url": "https://www.ledevoir.com/culture/arts-visuels/559488/l-art-qui-se-laisse-prendre-au-jeu"
+    },
+    {
+      "name": "Lien Multimédia: À la découverte de la scène indépendante montréalaise",
+      "publisher": "Lien Multimédia",
+      "releaseDate": "2019",
+      "url": "https://lienmultimedia.com/spip.php?article66792"
+    },
+    {
+      "name": "Lien Multimédia: L'art du jeu vidéo",
+      "publisher": "Lien Multimédia",
+      "releaseDate": "2019",
+      "url": "https://lienmultimedia.com/spip.php?article66810"
+    },
+    {
+      "name": "Lien Multimédia: Créer des jeux expérimentaux",
+      "publisher": "Lien Multimédia",
+      "releaseDate": "2019",
+      "url": "https://lienmultimedia.com/spip.php?article66794"
+    },
+    {
+      "name": "Anti-Materia: Ce jeu est romantique, dangereux et profond",
+      "publisher": "Anti-Materia",
+      "releaseDate": "2020",
+      "url": "https://anti-materia.org/eyecandy-1/2020/5/28/semana-2232-this-game-is-romantic-dangerous-and-deep"
+    },
+    {
+      "name": "Vie des Arts: Mois Multi 2019",
+      "publisher": "Vie des Arts",
+      "releaseDate": "2019",
+      "url": "https://viedesarts.com/provoquer-les-ravissements-encourager-les-resistances-se-laisser-destabiliser-par-le-mois-multi-2019/"
+    },
+    {
+      "name": "Journal Métro: Une arcade dans un métro",
+      "publisher": "Journal Métro",
+      "releaseDate": "2018",
+      "url": "https://journalmetro.com/societe/techno/1758320/une-arcade-dans-un-metro/"
+    }
+  ],
+  "languages": [
+    {
+        "language": "Français"
+    },
+    {
+        "language": "Anglais"
+    }
+  ],
+  "interests": [
+    {
+      "keywords": ["Jeux Indépendants", "Alt-Control", "Game Jams", "Jeux de Rôle sur Table"]
+    }
+  ],
+  "meta": {
+    "theme": "jsonresume-theme-macchiato-plus",
+    "version": "v1.0.0",
+    "lastModified": "2024-07-01",
+    "custom": {
+      "exhibitions": [
+        {
+          "name": "Taburnak",
+          "date": "2025"
+        },
+        {
+          "name": "Jouer la Poésie au Festival du Livre de Belfast",
+          "date": "2023"
+        },
+        {
+          "name": "Ce jeu est romantique, dangereux et intense",
+          "date": "2020"
+        },
+        {
+          "name": "Galerie de Jeux Vidéo MR-63",
+          "date": "2020"
+        },
+        {
+          "name": "Artcade",
+          "date": "2019, 2020"
+        },
+        {
+          "name": "Mois Multi",
+          "date": "2019"
+        },
+        {
+          "name": "Montréal Joue",
+          "date": "2018"
+        },
+        {
+          "name": "Participant régulier aux game jams depuis 2018",
+          "date": "2018-Present"
+        }
+      ]
+    }
+  }
+}

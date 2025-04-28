@@ -1,0 +1,1428 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
+  <title>Philippe Grenon</title>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <style>/* Utils */
+/*----- Colors -----*/
+/*----- Fonts -----*/
+/*----- Dimensions and sizes -----*/
+/* Base */
+@font-face {
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Josefin Sans Light'), local('JosefinSans-Light'), url(https://fonts.gstatic.com/s/josefinsans/v14/Qw3FZQNVED7rKGKxtqIqX5Ecpl5te10k.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Josefin Sans Bold'), local('JosefinSans-Bold'), url(https://fonts.gstatic.com/s/josefinsans/v14/Qw3FZQNVED7rKGKxtqIqX5Ectllte10k.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 300;
+  src: local('Lato Light Italic'), local('Lato-LightItalic'), url(https://fonts.gstatic.com/s/lato/v16/S6u_w4BMUTPHjxsI9w2_Gwfo.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v16/S6u8w4BMUTPHjxsAXC-v.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v16/S6u_w4BMUTPHjxsI5wq_Gwfo.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Lato Light'), local('Lato-Light'), url(https://fonts.gstatic.com/s/lato/v16/S6u9w4BMUTPHh7USSwiPHA.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v16/S6uyw4BMUTPHjx4wWw.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v16/S6u9w4BMUTPHh6UVSwiPHA.ttf) format('truetype');
+}
+
+html {
+  background: white;
+}
+
+body {
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  background: white;
+  margin: 50px 0 100px;
+  letter-spacing: .3px;
+  color: #39424B;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: none;
+  margin: 0;
+}
+
+h1 {
+  font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  letter-spacing: 1px;
+}
+
+h2 {
+  font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  letter-spacing: .5px;
+}
+
+h3 {
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  letter-spacing: .4px;
+}
+
+h3.bold {
+  font-weight: 700;
+}
+
+h4 {
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+}
+
+h4.bold {
+  font-weight: 700;
+}
+
+h5 {
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 11px;
+}
+
+h5.italic {
+  font-style: italic;
+}
+
+h6 {
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #2895F1;
+}
+
+a .fa-external-link {
+  font-size: 10px;
+  vertical-align: text-top;
+  margin-left: 2px;
+}
+
+p,
+li {
+  font-size: 11px;
+}
+
+blockquote {
+  font-size: 11px;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  margin: 10px 25px;
+}
+
+em {
+  color: #999;
+}
+
+ul {
+  margin: 10px 0 0;
+  -webkit-padding-start: 25px;
+}
+
+ul li {
+  padding-left: 10px;
+}
+
+ul.minimal {
+  list-style: none;
+  padding: 0;
+}
+
+ul.minimal li {
+  margin-bottom: 3px;
+  padding-left: 0;
+}
+
+ul.two-column {
+  -webkit-column-count: 2;
+  -webkit-column-gap: 28px;
+  column-count: 2;
+  column-gap: 28px;
+}
+
+ul.two-column li {
+  padding-left: 0;
+}
+
+@page {
+  size: A4;
+}
+
+.container {
+  padding-top: 20px;
+}
+
+.keyline {
+  width: 45px;
+  margin: 8px 0 10px;
+  border-top: 1px solid #386083;
+}
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.profile-pic {
+  margin-top: -5px;
+  margin-right: 18px;
+}
+
+.profile-pic img {
+  height: 52px;
+  width: 52px;
+  border-radius: 50%;
+  border: 2px solid #386083;
+}
+
+.summary {
+  margin: 5px 0 5px;
+}
+
+.sublink {
+  font-size: 70%;
+  font-weight: 200;
+  color: #777;
+}
+
+.sublink:hover {
+  color: #2895F1;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+/* Layouts */
+.page {
+  background: white;
+  width: 612px;
+  min-height: 792px;
+  display: block;
+  margin: 0 auto;
+  border-top: 10px solid #386083;
+  padding: 36px 22px 30px 34px;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
+}
+
+.page:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.left-column {
+  float: left;
+  width: 160px;
+  margin-right: 20px;
+  word-wrap: break-word;
+}
+
+.right-column {
+  width: auto;
+  overflow: hidden;
+}
+
+.item {
+  margin-bottom: 15px;
+}
+
+.item:last-child {
+  margin-bottom: 0;
+}
+
+@media print {
+  body {
+    margin: 0;
+  }
+
+  .page {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 36px 0 30px;
+    box-shadow: none;
+  }
+
+  .page .resume-header,
+  .page .resume-content {
+    padding: 0 22px 0 34px;
+  }
+
+  .container {
+    page-break-inside: avoid;
+  }
+
+  .work-container .item {
+    page-break-inside: avoid;
+  }
+
+  .fa-external-link {
+    display: none;
+  }
+}
+
+/* Components */
+.info-tag-container {
+  margin-bottom: 5px;
+}
+
+.info-tag-container .fa {
+  font-size: 14px;
+  width: 12px;
+  margin-right: 5px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.info-tag-container .fa.fa-map-marker {
+  font-size: 16px;
+}
+
+.info-tag-container .fa.fa-mobile {
+  font-size: 18px;
+}
+
+.info-tag-container .fa.fa-envelope-o {
+  font-size: 12px;
+}
+
+.info-tag-container .fa.fa-desktop {
+  font-size: 11px;
+}
+
+.info-tag-container .fa.fa-external-link {
+  width: auto;
+  font-size: inherit;
+  vertical-align: text-top;
+}
+
+.info-tag-container .info-text {
+  font-size: 12px;
+  text-transform: none;
+  display: inline-block;
+  vertical-align: middle;
+  width: 139px;
+}
+
+.references-container .fa {
+  font-size: 14px;
+}
+
+.education-container .location {
+  padding-bottom: 6px;
+  font-weight: 400;
+}
+
+.education-container .specialization {
+  text-transform: none;
+  font-style: italic;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.main-skill {
+  font-size: 80%;
+}
+
+.skill {
+  margin: .15em;
+  padding: .15em;
+  background: #e8f0f8;
+  border-radius: 5px;
+}
+
+.exhibitions-container .item {
+  width: 48%;
+  flex-grow: 0;
+  flex-shrink: 0;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  padding: 8px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.exhibitions-container h4 {
+  margin-bottom: 5px;
+  color: #386083;
+}
+
+.project-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.project-container .title {
+  width: 100%;
+  flex-basis: 100%;
+}
+
+.project-container .item {
+  width: 48%;
+  flex-grow: 0;
+  flex-shrink: 0;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  padding: 8px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  min-height: 80px;
+}
+
+.project-container h4 {
+  margin-bottom: 5px;
+  color: #386083;
+}
+
+.project-container .skill {
+  margin: .1em;
+  padding: .1em .3em;
+  background: #e8f0f8;
+  border-radius: 3px;
+  font-size: 9px;
+}
+
+.project-container .date {
+  font-style: italic;
+  font-size: 10px;
+  margin-top: 5px;
+  color: #555;
+}
+
+.exhibitions-container .flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+}
+
+/* Debug Panel */
+.debug-panel {
+  position: fixed;
+  top: 100px;
+  left: 0;
+  width: 200px;
+  background-color: #f5f5f5;
+  border-right: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  border-radius: 0 5px 5px 0;
+  padding: 15px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transition: transform 0.3s ease;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.debug-panel.collapsed {
+  transform: translateX(-180px);
+}
+
+.debug-panel h3 {
+  margin-bottom: 10px;
+  font-weight: 700;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+}
+
+.debug-panel h4 {
+  margin: 8px 0;
+  font-weight: 700;
+  font-size: 12px;
+  color: #333;
+}
+
+.debug-options {
+  font-size: 12px;
+}
+
+.debug-options label {
+  display: block;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.debug-options input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.project-list {
+  margin: 10px 0;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.project-control {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  padding: 2px;
+  border-radius: 3px;
+}
+
+.project-control:hover {
+  background-color: #e8e8e8;
+}
+
+.project-control label {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 11px;
+  margin-bottom: 0;
+  cursor: pointer;
+}
+
+.move-btn {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  margin: 0 2px;
+  background-color: #ddd;
+  border: none;
+  border-radius: 3px;
+  font-size: 10px;
+  line-height: 1;
+  cursor: pointer;
+  color: #333;
+}
+
+.move-btn:hover:not(:disabled) {
+  background-color: #2895F1;
+  color: white;
+}
+
+.move-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.debug-toggle {
+  background-color: #2895F1;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 3px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.debug-toggle:hover {
+  background-color: #1a7fd1;
+}
+
+@media print {
+  .debug-panel {
+    display: none;
+  }
+}
+
+.copy-order-btn {
+  background-color: #2895F1;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 3px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.copy-order-btn:hover {
+  background-color: #1a7fd1;
+}
+
+.copy-status {
+  text-align: center;
+  font-size: 11px;
+  height: 15px;
+  margin-bottom: 5px;
+}
+
+.copy-status.success {
+  color: #4CAF50;
+}
+
+.copy-status.error {
+  color: #f44336;
+}
+</style>
+</head>
+
+<body>
+  <div id="debug-panel" class="debug-panel">
+    <h3>Debug Options</h3>
+    <div class="debug-options">
+      <label><input type="checkbox" id="show-all-projects" checked> Show All Projects</label>
+      <hr>
+      <div class="project-list">
+        <h4>Project Visibility & Order</h4>
+        <div id="project-controls">
+          <!-- Project controls will be added here dynamically -->
+        </div>
+        <button id="copy-order" class="copy-order-btn">Copy Order to Clipboard</button>
+        <div id="copy-status" class="copy-status"></div>
+      </div>
+      <hr>
+      <button id="toggle-debug" class="debug-toggle">Hide Panel</button>
+    </div>
+  </div>
+  <main id="resume" class="page">
+    <header class="resume-header clearfix">
+        <div class="profile-header pull-left">
+            <h1>Philippe Grenon</h1>
+            <h2>Game Developer · Creative Coder · Fire Breather</h2>
+        </div>
+        <div class="profile-pic pull-right">
+        </div>
+    </header>
+    <div class="resume-content">
+      <aside class="left-column">
+        <div class="container about-container">
+            <div class="title">
+                <h3>About</h3>
+                <div class="keyline"></div>
+            </div>
+                <div class="info-tag-container">
+                    <i class="fa fa-map-marker"></i>
+                
+                        <h6 class="info-text">7141 12e Avenue Montréal QC H2A 2Y1 </h6>
+                </div>
+        
+        
+                <div class="info-tag-container">
+                    <i class="fa fa-envelope-o"></i>
+                
+                        <h6 class="info-text">
+                            <a href="mailto:pgrenon.pg@gmail.com" target="_blank">
+                                pgrenon.pg@gmail.com
+                                <i class="fa fa-external-link" aria-hidden="true"></i>
+                            </a>
+                        </h6>
+                </div>
+        
+                <div class="info-tag-container">
+                    <i class="fa fa-mobile"></i>
+                
+                        <h6 class="info-text">438 491-3055</h6>
+                </div>
+        
+        
+        </section>
+            <div class="skills-container">
+                    <section class="container">
+                            <div class="title">
+                                <h3>Game Development</h3>
+                                <div class="keyline"></div>
+                            </div>                    <div class="minimal flex-container">
+                                    <h6 class="main-skill skill">Unity</h6>
+                                    <h6 class="main-skill skill">C#</h6>
+                                    <h6 class="main-skill skill">Unreal Engine</h6>
+                                    <h6 class="main-skill skill">C++</h6>
+                                    <h6 class="main-skill skill">GAS</h6>
+                                    <h6 class="main-skill skill">Godot</h6>
+                                    <h6 class="main-skill skill">GDScript</h6>
+                                    <h6 class="main-skill skill">3Cs</h6>
+                                    <h6 class="main-skill skill">Network Multiplayer</h6>
+                            </div>
+                    </section>
+                    <section class="container">
+                            <div class="title">
+                                <h3>Creative Coding</h3>
+                                <div class="keyline"></div>
+                            </div>                    <div class="minimal flex-container">
+                                    <h6 class="main-skill skill">P5.js</h6>
+                                    <h6 class="main-skill skill">Node.js</h6>
+                                    <h6 class="main-skill skill">Arduino</h6>
+                                    <h6 class="main-skill skill">Python</h6>
+                                    <h6 class="main-skill skill">Blender</h6>
+                                    <h6 class="main-skill skill">Aseprite</h6>
+                            </div>
+                    </section>
+            </div>
+            <div class="container languages-container">
+                <div class="title">
+                    <h3>Languages</h3>
+                    <div class="keyline"></div>
+                </div>
+                <ul class="minimal">
+                        <li>
+                            <h6>English </h6>
+                        </li>
+                        <li>
+                            <h6>French </h6>
+                        </li>
+                </ul>
+            </div>
+            <div class="container interests-container">
+                <div class="title">
+                    <h3>Interests</h3>
+                    <div class="keyline"></div>
+                </div>
+                    <section class="item">
+                            <ul class="minimal">
+                                    <li>Indie Games</li>
+                                    <li>Alt-Control</li>
+                                    <li>Game Jams</li>
+                                    <li>Tabletop RPGs</li>
+                                    <li>Making</li>
+                                    <li>Woodworking</li>
+                            </ul>
+                    </section>
+            </div>
+      </aside>
+      <div class="right-column">
+                <div class="container summary-container">
+                    <div class="title">
+                        <h3>Summary</h3>
+                        <div class="keyline"></div>
+                    </div>            <p class="summary">
+                        Game developer with strong experience in Unity, Unreal Engine, and creative coding
+                    </p>
+                </div>
+        <div class="container work-container">
+            <div class="title">
+                <h3>Experience</h3>
+                <div class="keyline"></div>
+            </div>
+                <section class="item">
+                    <div class="section-header clearfix">
+                        <h3 class="bold pull-left">
+                                Metric Empire
+                        </h3>
+                        <h5 class="italic pull-right">
+                                <span class="startDate">2018</span>
+                                  <span class="endDate"> - Present</span>
+                        </h5>
+                    </div>
+        
+                    <h4>Gameplay Programmer</h4>
+        
+        
+        
+                    <ul>
+                        <li>Shipped Battle Shapers in Unity</li>
+                        <li>Developed character mechanics, camera systems and controls, modular roguelike gameplay mechanics</li>
+                        <li>Designed, implemented, and maintained several engine and non-engine tools for various pipelines (Art, Animation, Wwise, Dialogue, Localization, Versioning)</li>
+                        <li>Implemented online multiplayer in Unreal Engine as well as the Gameplay Ability System and character custom Movement Modes</li>
+                        <li>Managed complex Git workflows including branching strategies, feature development, and team collaboration</li>
+                    </ul>
+                </section>
+                <section class="item">
+                    <div class="section-header clearfix">
+                        <h3 class="bold pull-left">
+                                Flop Collective
+                        </h3>
+                        <h5 class="italic pull-right">
+                                <span class="startDate">2018</span>
+                                    <span class="endDate"> - 2020</span>
+                        </h5>
+                    </div>
+        
+                    <h4>Coordinator &amp; Treasurer</h4>
+        
+        
+        
+                    <ul>
+                        <li>Hosted meetups, organized video game art galeries, connected creators to promote experimental games</li>
+                        <li>Handled finances and sponsorships for a non-profit</li>
+                        <li>Developed multiple small games and art installations</li>
+                    </ul>
+                </section>
+        </div>
+        <div class="container education-container">
+            <div class="title">
+            <h3>Education</h3>
+            <div class="keyline"></div>
+        </div> 
+            <section class="item">
+                <div class="section-header clearfix">
+            <h3 class="bold pull-left">
+                    Université de Montréal
+            </h3>
+            <h5 class="italic pull-right">
+                    <span class="startDate">2018</span>
+            </h5>
+        </div>
+         
+                <h4>Certificate, Applied Programming</h4>
+        
+              </section>
+        
+            <section class="item">
+                <div class="section-header clearfix">
+            <h3 class="bold pull-left">
+                    McGill University
+            </h3>
+            <h5 class="italic pull-right">
+                    <span class="startDate">2015</span>
+                        <span class="endDate"> - 2017</span>
+            </h5>
+        </div>
+         
+                <h4>M.A., Islamic Studies &amp; History of Science</h4>
+        
+              </section>
+        
+            <section class="item">
+                <div class="section-header clearfix">
+            <h3 class="bold pull-left">
+                    Université de Montréal
+            </h3>
+            <h5 class="italic pull-right">
+                    <span class="startDate">2012</span>
+                        <span class="endDate"> - 2015</span>
+            </h5>
+        </div>
+         
+                <h4>B.A., History</h4>
+        
+              </section>
+        </div>
+        <div class="container project-container">
+            <div class="title">
+                <h3>Projects</h3>
+                <div class="keyline"></div>
+            </div>
+                        <section class="item" data-project-name="Battle Shapers" data-start-date="2018" data-end-date="2023">
+                            <div class="section-header clearfix">
+                                <h3 class="bold pull-left">
+                                        Battle Shapers
+                                </h3>
+                                <h5 class="italic pull-right">
+                                        <span class="startDate">2018</span>
+                                            <span class="endDate"> - 2023</span>
+                                </h5>
+                            </div>
+                              <h4>
+                                Roguelite FPS boomer shooter with fast-paced combat and tight controls
+                              </h4>
+        
+        
+                            <div class="flex-container">
+                                    <h6 class="skill">Unity</h6>
+                                    <h6 class="skill">C#</h6>
+                                    <h6 class="skill">Full Dev Cycle</h6>
+                                    <h6 class="skill">Camera, Character, Controls</h6>
+                                    <h6 class="skill">Tools</h6>
+                            </div>
+        
+        
+                        </section>
+                        <section class="item" data-project-name="Émile et Moi" data-start-date="2019" data-end-date="2025">
+                            <div class="section-header clearfix">
+                                <h3 class="bold pull-left">
+                                        Émile et Moi
+                                </h3>
+                                <h5 class="italic pull-right">
+                                        <span class="startDate">2019</span>
+                                            <span class="endDate"> - 2025</span>
+                                </h5>
+                            </div>
+                              <h4>
+                                Poetry platformer using Markov chains
+                              </h4>
+        
+        
+                            <div class="flex-container">
+                                    <h6 class="skill">P5.js</h6>
+                                    <h6 class="skill">Node.js</h6>
+                                    <h6 class="skill">Language processing and generation</h6>
+                                    <h6 class="skill">Twitter/Bluesky bots</h6>
+                            </div>
+        
+        
+                        </section>
+                        <section class="item" data-project-name="Collège Saint-Louis - COVID Contact Tracing System" data-start-date="2020" data-end-date="2020">
+                            <div class="section-header clearfix">
+                                <h3 class="bold pull-left">
+                                        Collège Saint-Louis - COVID Contact Tracing System
+                                </h3>
+                                <h5 class="italic pull-right">
+                                        <span class="startDate">2020</span>
+                                </h5>
+                            </div>
+                              <h4>
+                                Built backend tools in Python for contact tracing during the COVID-19 pandemic
+                              </h4>
+        
+        
+                            <div class="flex-container">
+                                    <h6 class="skill">Python</h6>
+                                    <h6 class="skill">Backend</h6>
+                                    <h6 class="skill">Data Processing</h6>
+                            </div>
+        
+        
+                        </section>
+                        <section class="item" data-project-name="Unannounced Project" data-start-date="2024" data-end-date="">
+                            <div class="section-header clearfix">
+                                <h3 class="bold pull-left">
+                                        Unannounced Project
+                                </h3>
+                                <h5 class="italic pull-right">
+                                        <span class="startDate">2024</span>
+                                          <span class="endDate"> - Present</span>
+                                </h5>
+                            </div>
+                              <h4>
+                                Unannounced Metric Empire project
+                              </h4>
+        
+        
+                            <div class="flex-container">
+                                    <h6 class="skill">Unreal Engine</h6>
+                                    <h6 class="skill">C++</h6>
+                                    <h6 class="skill">GAS</h6>
+                                    <h6 class="skill">3Cs</h6>
+                                    <h6 class="skill">Network Multiplayer</h6>
+                            </div>
+        
+        
+                        </section>
+                        <section class="item" data-project-name="Des Fois J&#x27;suis Fâché" data-start-date="2020" data-end-date="">
+                            <div class="section-header clearfix">
+                                <h3 class="bold pull-left">
+                                        Des Fois J&#x27;suis Fâché
+                                </h3>
+                                <h5 class="italic pull-right">
+                                        <span class="startDate">2020</span>
+                                          <span class="endDate"> - Present</span>
+                                </h5>
+                            </div>
+                              <h4>
+                                FPS where firing reveals fragments of Quebecois poetry
+                              </h4>
+        
+        
+                            <div class="flex-container">
+                                    <h6 class="skill">Unity</h6>
+                                    <h6 class="skill">C#</h6>
+                                    <h6 class="skill">Text-to-Speech using Google API</h6>
+                                    <h6 class="skill">Blender</h6>
+                            </div>
+        
+        
+                        </section>
+                        <section class="item" data-project-name="Hover" data-start-date="2019" data-end-date="">
+                            <div class="section-header clearfix">
+                                <h3 class="bold pull-left">
+                                        Hover
+                                </h3>
+                                <h5 class="italic pull-right">
+                                        <span class="startDate">2019</span>
+                                          <span class="endDate"> - Present</span>
+                                </h5>
+                            </div>
+                              <h4>
+                                Alt-controller flying game with Arduino potentiometers and switches
+                              </h4>
+        
+        
+                            <div class="flex-container">
+                                    <h6 class="skill">Alt-Control</h6>
+                                    <h6 class="skill">Arduino</h6>
+                                    <h6 class="skill">Unity</h6>
+                                    <h6 class="skill">C#</h6>
+                                    <h6 class="skill">C</h6>
+                                    <h6 class="skill">Blender</h6>
+                            </div>
+        
+        
+                        </section>
+                        <section class="item" data-project-name="Bullet Command" data-start-date="2019" data-end-date="">
+                            <div class="section-header clearfix">
+                                <h3 class="bold pull-left">
+                                        Bullet Command
+                                </h3>
+                                <h5 class="italic pull-right">
+                                        <span class="startDate">2019</span>
+                                          <span class="endDate"> - Present</span>
+                                </h5>
+                            </div>
+                              <h4>
+                                Reverse shoot &#x27;em up using custom Arduino control panel
+                              </h4>
+        
+        
+                            <div class="flex-container">
+                                    <h6 class="skill">Alt-Control</h6>
+                                    <h6 class="skill">Arduino</h6>
+                                    <h6 class="skill">Unity</h6>
+                                    <h6 class="skill">C#</h6>
+                                    <h6 class="skill">C</h6>
+                                    <h6 class="skill">Aseprite</h6>
+                            </div>
+        
+        
+                        </section>
+                        <section class="item" data-project-name="Everything Die" data-start-date="2018" data-end-date="">
+                            <div class="section-header clearfix">
+                                <h3 class="bold pull-left">
+                                        Everything Die
+                                </h3>
+                                <h5 class="italic pull-right">
+                                        <span class="startDate">2018</span>
+                                          <span class="endDate"> - Present</span>
+                                </h5>
+                            </div>
+                              <h4>
+                                Cube-face puzzle roguelike
+                              </h4>
+        
+        
+                            <div class="flex-container">
+                                    <h6 class="skill">Unity</h6>
+                                    <h6 class="skill">C#</h6>
+                                    <h6 class="skill">Blender</h6>
+                            </div>
+        
+        
+                        </section>
+        </div>
+        <div class="container publications-container">
+            <div class="title">
+                <h3>Press</h3>
+                <div class="keyline"></div>
+            </div>
+            <section class="item">
+                <h3 class="bold">
+                    <a href="https://www.ledevoir.com/culture/arts-visuels/559488/l-art-qui-se-laisse-prendre-au-jeu" target="_blank">
+                        L&#x27;art qui se laisse prendre au jeu
+                        <span class="sublink">· <i class="fa fa-external-link"></i></span>
+                    </a>
+                </h3>
+                
+                <h5 class="awarder pull-left">Le Devoir</h5>
+        
+                <h5 class="italic pull-right">2019</h5>
+        
+                <div class="clearfix"></div>
+        
+        
+            </section>
+            <section class="item">
+                <h3 class="bold">
+                    <a href="https://lienmultimedia.com/spip.php?article66792" target="_blank">
+                        À la découverte de la scène indépendante montréalaise
+                        <span class="sublink">· <i class="fa fa-external-link"></i></span>
+                    </a>
+                </h3>
+                
+                <h5 class="awarder pull-left">Lien Multimédia</h5>
+        
+                <h5 class="italic pull-right">2019</h5>
+        
+                <div class="clearfix"></div>
+        
+        
+            </section>
+            <section class="item">
+                <h3 class="bold">
+                    <a href="https://lienmultimedia.com/spip.php?article66810" target="_blank">
+                        L&#x27;art du jeu vidéo
+                        <span class="sublink">· <i class="fa fa-external-link"></i></span>
+                    </a>
+                </h3>
+                
+                <h5 class="awarder pull-left">Lien Multimédia</h5>
+        
+                <h5 class="italic pull-right">2019</h5>
+        
+                <div class="clearfix"></div>
+        
+        
+            </section>
+            <section class="item">
+                <h3 class="bold">
+                    <a href="https://lienmultimedia.com/spip.php?article66794" target="_blank">
+                        Créer des jeux expérimentaux
+                        <span class="sublink">· <i class="fa fa-external-link"></i></span>
+                    </a>
+                </h3>
+                
+                <h5 class="awarder pull-left">Lien Multimédia</h5>
+        
+                <h5 class="italic pull-right">2019</h5>
+        
+                <div class="clearfix"></div>
+        
+        
+            </section>
+            <section class="item">
+                <h3 class="bold">
+                    <a href="https://anti-materia.org/eyecandy-1/2020/5/28/semana-2232-this-game-is-romantic-dangerous-and-deep" target="_blank">
+                        This Game is Romantic, Dangerous and Deep
+                        <span class="sublink">· <i class="fa fa-external-link"></i></span>
+                    </a>
+                </h3>
+                
+                <h5 class="awarder pull-left">Anti-Materia</h5>
+        
+                <h5 class="italic pull-right">2020</h5>
+        
+                <div class="clearfix"></div>
+        
+        
+            </section>
+            <section class="item">
+                <h3 class="bold">
+                    <a href="https://viedesarts.com/provoquer-les-ravissements-encourager-les-resistances-se-laisser-destabiliser-par-le-mois-multi-2019/" target="_blank">
+                        Provoquer les ravissements, encourager les résistances : se laisser déstabiliser par le Mois Multi 2019
+                        <span class="sublink">· <i class="fa fa-external-link"></i></span>
+                    </a>
+                </h3>
+                
+                <h5 class="awarder pull-left">Vie des Arts</h5>
+        
+                <h5 class="italic pull-right">2019</h5>
+        
+                <div class="clearfix"></div>
+        
+        
+            </section>
+            <section class="item">
+                <h3 class="bold">
+                    <a href="https://journalmetro.com/societe/techno/1758320/une-arcade-dans-un-metro/" target="_blank">
+                        Une arcade dans un métro
+                        <span class="sublink">· <i class="fa fa-external-link"></i></span>
+                    </a>
+                </h3>
+                
+                <h5 class="awarder pull-left">Journal Métro</h5>
+        
+                <h5 class="italic pull-right">2018</h5>
+        
+                <div class="clearfix"></div>
+        
+        
+            </section>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const debugPanel = document.getElementById('debug-panel');
+      const toggleBtn = document.getElementById('toggle-debug');
+      const showAllProjectsCheckbox = document.getElementById('show-all-projects');
+      const projectControlsContainer = document.getElementById('project-controls');
+      const copyOrderBtn = document.getElementById('copy-order');
+      const copyStatus = document.getElementById('copy-status');
+      let projectItems = [];
+      
+      // Toggle debug panel
+      toggleBtn.addEventListener('click', function() {
+        if (debugPanel.classList.contains('collapsed')) {
+          debugPanel.classList.remove('collapsed');
+          toggleBtn.textContent = 'Hide Panel';
+        } else {
+          debugPanel.classList.add('collapsed');
+          toggleBtn.textContent = 'Show Panel';
+        }
+      });
+      
+      // Helper function to get numeric year from date string
+      const getYear = function(dateStr) {
+        if (!dateStr) return 0;
+        // Try to extract year from string (assuming format is YYYY or contains YYYY)
+        const match = dateStr.match(/\d{4}/);
+        return match ? parseInt(match[0]) : 0;
+      };
+      
+      // Function to move a project up or down in the order
+      const moveProject = function(index, direction) {
+        const projectContainer = document.querySelector('.project-container');
+        if (!projectContainer) return;
+        
+        // Get current index and target index
+        const currentIndex = parseInt(index);
+        const targetIndex = direction === 'up' ? currentIndex - 1 : currentIndex + 1;
+        
+        // Check if the target index is valid
+        if (targetIndex < 0 || targetIndex >= projectItems.length) {
+          return; // Can't move beyond boundaries
+        }
+        
+        // Swap the elements in the array
+        const temp = projectItems[currentIndex];
+        projectItems[currentIndex] = projectItems[targetIndex];
+        projectItems[targetIndex] = temp;
+        
+        // Rerender the projects in the new order
+        updateProjectsDisplay();
+        
+        // Update the project controls to reflect the new order
+        populateProjectControls();
+      };
+      
+      // Update the display of projects
+      const updateProjectsDisplay = function() {
+        const projectContainer = document.querySelector('.project-container');
+        if (!projectContainer) return;
+        
+        const projectTitle = projectContainer.querySelector('.title');
+        
+        // Clear container and re-append items in current order
+        const fragment = document.createDocumentFragment();
+        fragment.appendChild(projectTitle.cloneNode(true));
+        
+        projectItems.forEach(function(item) {
+          fragment.appendChild(item);
+        });
+        
+        // Clear and repopulate container
+        while (projectContainer.firstChild) {
+          projectContainer.removeChild(projectContainer.firstChild);
+        }
+        
+        projectContainer.appendChild(fragment);
+      };
+      
+      // Populate project controls
+      const populateProjectControls = function() {
+        // Clear existing controls
+        projectControlsContainer.innerHTML = '';
+        
+        // Add controls for each project
+        projectItems.forEach((item, index) => {
+          const projectName = item.getAttribute('data-project-name') || `Project ${index + 1}`;
+          const itemId = `project-${index}`;
+          
+          const controlDiv = document.createElement('div');
+          controlDiv.className = 'project-control';
+          
+          // Checkbox for visibility
+          const checkbox = document.createElement('input');
+          checkbox.type = 'checkbox';
+          checkbox.id = itemId;
+          checkbox.checked = item.style.display !== 'none';
+          checkbox.dataset.index = index;
+          
+          // Add event listener for visibility checkbox
+          checkbox.addEventListener('change', function() {
+            if (this.checked) {
+              projectItems[index].style.display = 'block';
+            } else {
+              projectItems[index].style.display = 'none';
+            }
+          });
+          
+          // Label with project name
+          const label = document.createElement('label');
+          label.htmlFor = itemId;
+          label.title = projectName;
+          label.textContent = ' ' + projectName;
+          
+          // Up button
+          const upBtn = document.createElement('button');
+          upBtn.className = 'move-btn up-btn';
+          upBtn.innerHTML = '&uarr;';
+          upBtn.disabled = index === 0;
+          upBtn.title = 'Move Up';
+          upBtn.dataset.index = index;
+          upBtn.addEventListener('click', function() {
+            moveProject(this.dataset.index, 'up');
+          });
+          
+          // Down button
+          const downBtn = document.createElement('button');
+          downBtn.className = 'move-btn down-btn';
+          downBtn.innerHTML = '&darr;';
+          downBtn.disabled = index === projectItems.length - 1;
+          downBtn.title = 'Move Down';
+          downBtn.dataset.index = index;
+          downBtn.addEventListener('click', function() {
+            moveProject(this.dataset.index, 'down');
+          });
+          
+          // Assemble the control
+          controlDiv.appendChild(checkbox);
+          controlDiv.appendChild(label);
+          controlDiv.appendChild(upBtn);
+          controlDiv.appendChild(downBtn);
+          
+          projectControlsContainer.appendChild(controlDiv);
+        });
+      };
+      
+      // Copy the current project order to clipboard as JSON
+      const copyOrderToClipboard = function() {
+        // Create an array with only the names of visible projects
+        const projectOrder = projectItems
+          .filter(item => item.style.display !== 'none')
+          .map(item => item.getAttribute('data-project-name'));
+        
+        // Convert to JSON
+        const jsonString = JSON.stringify(projectOrder, null, 2);
+        
+        // Copy to clipboard
+        navigator.clipboard.writeText(jsonString)
+          .then(() => {
+            // Show success message
+            copyStatus.textContent = 'Copied!';
+            copyStatus.classList.add('success');
+            
+            // Clear the message after 2 seconds
+            setTimeout(() => {
+              copyStatus.textContent = '';
+              copyStatus.classList.remove('success');
+            }, 2000);
+          })
+          .catch(err => {
+            // Show error message
+            copyStatus.textContent = 'Failed to copy: ' + err;
+            copyStatus.classList.add('error');
+            
+            // Clear the message after 2 seconds
+            setTimeout(() => {
+              copyStatus.textContent = '';
+              copyStatus.classList.remove('error');
+            }, 2000);
+          });
+      };
+      
+      // Show/hide all projects
+      showAllProjectsCheckbox.addEventListener('change', function() {
+        const projectCheckboxes = document.querySelectorAll('#project-controls input[type="checkbox"]');
+        
+        projectCheckboxes.forEach((checkbox, index) => {
+          checkbox.checked = this.checked;
+          
+          if (this.checked) {
+            projectItems[index].style.display = 'block';
+          } else {
+            projectItems[index].style.display = 'none';
+          }
+        });
+      });
+      
+      // Initialize project items array from the DOM
+      const initialSortProjects = function()
+      {
+        const projectContainer = document.querySelector('.project-container');
+        if (!projectContainer) 
+        {
+          return;
+        }
+        
+        // Get all project items (exclude the title element)
+        const allItems = projectContainer.querySelectorAll('.item');
+        if (!allItems || allItems.length === 0) 
+        {
+          console.log('No project items found');
+          return;
+        }
+        
+        // Clear the array and repopulate
+        projectItems = [];
+        allItems.forEach(function(item) 
+        {
+          // Extract project name from item heading if available
+          const nameElem = item.querySelector('h3');
+          if (nameElem) 
+          {
+            item.setAttribute('data-project-name', nameElem.textContent.trim());
+          }
+          
+          projectItems.push(item);
+        });
+      };
+      
+      // Initialize
+      initialSortProjects();
+      populateProjectControls();
+      
+      // Add event listener for copy button
+      copyOrderBtn.addEventListener('click', copyOrderToClipboard);
+    });
+  </script>
+</body>
+
+</html>

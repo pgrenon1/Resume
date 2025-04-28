@@ -1,0 +1,14 @@
+{
+  "name": "philippe-resume",
+  "version": "1.0.0",
+  "description": "Philippe Grenon's resume",
+  "scripts": {
+    "init": "npx resumed init resume.json",
+    "render": "npx resumed render resume.json --theme jsonresume-theme-macchiato-plus -o resume.html && npx resumed render resume.fr.json --theme jsonresume-theme-macchiato-plus -o resume.fr.html",
+    "export": "npx resumed export resume.json -o resume.pdf"
+  },
+  "dependencies": {
+    "resumed": "latest",
+    "jsonresume-theme-macchiato-plus": "file:theme/jsonresume-theme-macchiato-plus"
+  }
+}

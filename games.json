@@ -1,0 +1,232 @@
+{
+    "games": [
+        {
+            "title": "Champain",
+            "description": "Alternate controls game where players use their mobile phones to shake and spray a champagne bottle to propulse little astronauts to play soccer in space and race each other.",
+            "links": {
+                "source": "https://github.com/pgrenon1/Slingshit",
+                "play": "https://globalgamejam.org/games/2025/champain-8"
+            },
+            "features": ["Alt-Control", "Godot", "Android Studio", "GDScript", "Kotlin"],
+            "lastUpdated": "2025"
+        },
+        {
+            "title": "L'Enfer c'est les autres",
+            "description": "A walking sim about that moment on the curb when someone is always walking just too slow in front of you.",
+            "links": {
+            },
+            "features": ["Unreal Engine", "C++"],
+            "lastUpdated": "2024"
+        },
+        {
+            "title": "Battle Shapers",
+            "description": "A fast-paced FPS roguelike boomer shooter",
+            "links": {
+                "play": "https://store.steampowered.com/app/1421290/Battle_Shapers/"
+            },
+            "features": ["Unity", "C#", "Full Dev Cycle"],
+            "lastUpdated": "2024"
+        },
+        {
+            "title": "Let 'M Cook",
+            "description": "A multiplayer cooking game with top-down twin-stick controls. Players must cook ingredients while fight monsters.",
+            "links": {
+                "source": "https://github.com/anoel13/LetEmCook",
+            },
+            "features": ["Unreal Engine", "C++", "GAS"],
+            "lastUpdated": "2024"
+        },
+        {
+            "title": "Émile et Moi",
+            "description": "A platformer that uses procedural grammar to write poems. Players jump on platforms containing words, which are added to their poem. Words are picked from a database of 200 francophone texts of classic Quebecois poets using Markov chains.",
+            "links": {
+                "play": "https://emileetmoi.com/",
+                "twitter": "https://twitter.com/EmileEtMoi"
+            },
+            "features": ["P5.js", "Node.js", "Language processing and generation", "Twitter/Bluesky bots"],
+            "lastUpdated": "2023"
+        },
+        {
+            "title": "Slingshit",
+            "description": "Attach cables to the environment and enemies to fling them toward each other or to swing yourself around.",
+            "links": {
+                "source": "https://github.com/pgrenon1/Slingshit"
+            },
+            "features": ["Godot", "C#"],
+            "lastUpdated": "2023"
+        },
+        {
+            "title": "Memoir",
+            "description": "A top-down twin-stick action game where players must flip the tiles of the ground to uncover pairs. When you make a pair, you temporarily gain the skill represented by the image.",
+            "links": {
+                "source": "https://github.com/pgrenon1/Iconic"
+            },
+            "features": ["Unity", "C#"],
+            "lastUpdated": "2022"
+        },
+        {
+            "title": "The File Explorer",
+            "description": "A text-based adventure game where players explore an old Victorian mansion through folders and text-files inside a folder structure in Windows' file explorer. Interactivity comes in the form of batch files, some of which move through the folders by themselves, others make files and folders appear and disappear or play sounds.",
+            "links": {
+                "source": "https://github.com/pgrenon1/The-File-Explorer"
+            },
+            "features": ["Batch Script"],
+            "lastUpdated": "2022"
+        },
+        {
+            "title": "Failbot",
+            "description": "Fast Paced 3rd person runner where you have to hit obstacles to clear them out so you can restart and complete the level.",
+            "links": {
+                "source": "https://github.com/pgrenon1/Fail",
+                "play": "https://philg.itch.io/fail"
+            },
+            "features": ["Unity", "C#"],
+            "lastUpdated": "2021"
+        },
+        {
+            "title": "Clitelum",
+            "description": "3rd person platformer where you control the two ends of a worm.",
+            "links": {
+                "source": "https://github.com/pgrenon1/InteriorDesign"
+            },
+            "features": ["Unity", "C#"],
+            "lastUpdated": "2021"
+        },
+        {
+            "title": "Des Fois J'suis Fache",
+            "description": "A first-person shooter where players collect weapons and shoot at objects to hear and display words from various Quebec poems.",
+            "links": {
+                "source": "https://github.com/pgrenon1/DesFoisJsuisFache",
+                "play": "https://philg.itch.io/des-fois-jsuis-fache"
+            },
+            "features": ["Unity", "C#", "Text-to-Speech using Google API"],
+            "lastUpdated": "2020"
+        },
+        {
+            "title": "Nature Adores a Vacuum",
+            "description": "This is an athmospheric walking sim where you absorb all colors.",
+            "links": {
+                "source": "https://github.com/pgrenon1/void",
+                "play": "https://philg.itch.io/natureadoresavacuum"
+            },
+            "features": ["Unity", "C#", "Amplify Shader Editor"],
+            "lastUpdated": "2020"
+        },
+        {
+            "title": "Off Dimension",
+            "description": "This is an arena space shooter where you fly a spaceship and shoot enemies. Your weapons are tuned to a specific dimension, so they only reload when you're in that dimension, forcing you to switch.",
+            "links": {
+                "source": "https://github.com/pgrenon1/PATRICE",
+                "play": "https://philg.itch.io/off-dimension"
+            },
+            "features": ["Unity", "C#"],
+            "lastUpdated": "2020"
+        },
+        {
+            "title": "DDND",
+            "description": "Stands for Dance Dance N' Dragons. A rythm game where players team up to fight and progress through dungeons by performing dance moves (I only ever made it work with a keyboard)",
+            "links": {
+                "source": "https://github.com/pgrenon1/DDND"
+            },
+            "features": ["Unity", "C#"],
+            "lastUpdated": "2020"
+        },
+        {
+            "title": "Rubik-Like",
+            "description": "A puzzlish roguelike played on a Rubik's cube. Players must manipulate the cube and move along it's faces to acquire treasure and defeat enemies.",
+            "links": {
+                "source": "https://github.com/pgrenon1/NotRubik"
+            },
+            "features": ["Unity", "C#"],
+            "lastUpdated": "2020"
+        },
+        {
+            "title": "Hover",
+            "description": "An experimental hardware game with an alternative controller made with Arduino. Players must use communication and cooperation to manipulate an aircraft that they need to land on a designated platform. The ship has four thrusters that are controlled by four potentiometers, and two key switches needed to start the motors.",
+            "links": {
+                "source": "https://github.com/pgrenon1/hover"
+            },
+            "features": ["Alt-Control", "Arduino", "Unity", "C#", "C"],
+            "lastUpdated": "2019"
+        },
+        {
+            "title": "Mut8",
+            "description": "A terminal-based classic roguelike built with an Entity Component System. Its architecture is highly compatible with data-driven design techniques, characterized by flexible runtime variability in function and behaviors.",
+            "links": {
+                "source": "https://github.com/pgrenon1/roguelike"
+            },
+            "features": ["Python", "Esper ECS", "ASCII graphics", "TCOD"],
+            "lastUpdated": "2019"
+        },
+        {
+            "title": "G**mba World",
+            "description": "A mobile game about dodging falling objects. Features online rankings and an achievement system.",
+            "links": {
+                "source": "https://github.com/pgrenon1/Goomba-World"
+            },
+            "features": ["Unity", "C#", "Online Leaderboard using Google Firebase"],
+            "lastUpdated": "2019"
+        },
+        {
+            "title": "Bullet Command",
+            "description": "A coop, reverse shoot 'em up with a custom controller panel made with Arduino. The panel features multiple hardware inputs, joysticks, switches, numpad, LCD monitors, and key-switches.",
+            "links": {
+                "source": "https://github.com/pgrenon1/bulletcommand"
+            },
+            "features": ["Alt-Control", "Arduino", "Unity", "C#", "C"],
+            "lastUpdated": "2019"
+        },
+        {
+            "title": "Inverted Axis",
+            "description": "A rail shooter like StarFox played with a complex joystick controller. Every lap around the level, one input is exchanged with another (for example, shooting by wiggling the joystick and controlling height with the trigger, etc.)",
+            "links": {
+                "source": "https://github.com/pgrenon1/InvertedAxis"
+            },
+            "features": ["Unity", "C#"],
+            "lastUpdated": "2019"
+        },
+        {
+            "title": "La Ligne Pointilée",
+            "description": "A rhythm game where players control a metro line that grows when it reaches passengers. Made for an open-air expo during summer 2018 at the Station F-MR by Projet MR-63. Set in an old decommissioned Montreal metro train.",
+            "links": {
+                "source": "https://github.com/majetteleger/FMRSnake"
+            },
+            "features": ["Unity", "C#", "Online Leaderboard using Google Firebase"],
+            "lastUpdated": "2018"
+        },
+        {
+            "title": "Drunk Dragon",
+            "description": "An experimental game with alternative hardware controls made with Arduino. Players control a fire-breathing dragon using a breathalyzer that measures ethanol. The more ethanol in the player's breath, the more flame is produced.",
+            "links": {
+                "source": "https://github.com/pgrenon1/drunk-dragon"
+            },
+            "features": ["Alt-Control", "Arduino", "Unity", "C#"],
+            "lastUpdated": "2018"
+        },
+        {
+            "title": "Out of the Woods",
+            "description": "A survival and exploration game for mobile with crafting and management elements. Set on a procedurally generated array of hexagonal tiles, players must manage hunger, thirst, and body temperature while exploring to reach safety.",
+            "features": ["Unity", "C#"],
+            "lastUpdated": "2018"
+        },
+        {
+            "title": "Lost Signals",
+            "description": "A collection of mini-games and media, told through an old TV set and a floating record player. Focuses on the transformation of signal when communicated; how the medium alters its representation and how that representation translates to another when transmitted anew.",
+            "links": {
+                "play": "https://flopgames.itch.io/lost-signals",
+                "source": "https://github.com/pgrenon1/lostsignals"
+            },
+            "features": ["Unity", "C#"],
+            "lastUpdated": "2018"
+        },
+        {
+            "title": "Everything Die",
+            "description": "A grid-based puzzle game where players control a cube that rotates when moving around. Players can acquire one-use items held on the cube's faces, usable only when facing up. Available in both 2D and 3D versions.",
+            "links": {
+                "source": "https://github.com/pgrenon1/everythingdie"
+            },
+            "features": ["Unity", "C#"],
+            "lastUpdated": "2018"
+        }
+    ]
+} 
