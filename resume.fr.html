@@ -331,18 +331,48 @@ ul.two-column li {
     display: none;
   }
 
+  /* Print styles for skills and project keywords */
   .skill {
+    display: inline-block;
     margin: .15em;
-    padding: .15em;
-    background: #e8f0f8;
-    border-radius: 5px;
+    padding: .15em .3em;
+    background: #e8f0f8 !important;
+    border-radius: 5px !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
   }
 
   .project-container .skill {
+    display: inline-block;
     margin: .1em;
     padding: .1em .3em;
-    background: #e8f0f8;
-    border-radius: 5px;
+    background: #e8f0f8 !important;
+    border-radius: 5px !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  /* Print styles for project boxes */
+  .project-container .item {
+    width: 48%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    background-color: #f9f9f9 !important;
+    border-radius: 5px !important;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    min-height: 80px;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
   }
 }
 

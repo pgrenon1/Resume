@@ -318,6 +318,12 @@
   ],
   "publications": [
     {
+      "name": "This Game is Romantic, Dangerous and Deep",
+      "publisher": "Anti-Materia",
+      "releaseDate": "2020",
+      "url": "https://anti-materia.org/eyecandy-1/2020/5/28/semana-2232-this-game-is-romantic-dangerous-and-deep"
+    },
+    {
       "name": "L'art qui se laisse prendre au jeu",
       "publisher": "Le Devoir",
       "releaseDate": "2019",
@@ -340,12 +346,6 @@
       "publisher": "Lien Multimédia",
       "releaseDate": "2019",
       "url": "https://lienmultimedia.com/spip.php?article66794"
-    },
-    {
-      "name": "This Game is Romantic, Dangerous and Deep",
-      "publisher": "Anti-Materia",
-      "releaseDate": "2020",
-      "url": "https://anti-materia.org/eyecandy-1/2020/5/28/semana-2232-this-game-is-romantic-dangerous-and-deep"
     },
     {
       "name": "Provoquer les ravissements, encourager les résistances : se laisser déstabiliser par le Mois Multi 2019",
@@ -393,11 +393,11 @@
         },
         {
           "name": "MR-63 Video Game Gallery",
-          "date": "2020"
+          "date": "2018"
         },
         {
           "name": "Artcade",
-          "date": "2019, 2020"
+          "date": "2018, 2019"
         },
         {
           "name": "Mois Multi",
