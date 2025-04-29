@@ -19,11 +19,11 @@
       "position": "Gameplay Programmer",
       "startDate": "2018",
       "highlights": [
-        "Shipped Battle Shapers in Unity",
+        "Shipped Battle Shapers in Unity, from initial prototyping to final release on Steam",
         "Developed character, camera and controls systems, modular roguelike gameplay mechanics",
         "Designed, implemented, and maintained several engine and non-engine tools for various pipelines (Art, Animation, Wwise, Dialogue, Localization, Versioning)",
         "Implemented online multiplayer in Unreal Engine as well as the Gameplay Ability System and character custom Movement Modes",
-        "Managed complex Git workflows including branching strategies, feature development, and team collaboration"
+        "Managed Git workflows to enable branching strategies, feature development, and team collaboration"
       ]
     },
     {
@@ -32,9 +32,9 @@
       "startDate": "2018",
       "endDate": "2020",
       "highlights": [
-        "Hosted meetups, organized video game art galeries, connected creators to promote experimental games",
-        "Handled finances and sponsorships for a non-profit",
-        "Developed multiple small games and art installations"
+        "Handled finances and sponsorships for Flop, a non-profit artist collective promoting experimental games",
+        "Fostered a community of independent game developers by hosting meetups, organizing video game art galeries, and connecting creators",
+        "Developed multiple small games and art installations for events, exhibitions"
       ]
     }
   ],
@@ -74,7 +74,8 @@
         "Godot",
         "GDScript",
         "3Cs",
-        "Network Multiplayer"
+        "Network Multiplayer",
+        "Git"
       ]
     },
     {
@@ -187,7 +188,7 @@
     {
       "name": "Des Fois J'suis Fâché",
       "description": "FPS where firing reveals fragments of Quebecois poetry",
-      "keywords": ["Unity", "C#", "Text-to-Speech using Google API", "Blender"],
+      "keywords": ["Unity", "C#", "Text-to-Speech using Google API", "Blender", "Amplify Shader Editor"],
       "startDate": "2020",
       "endDate": "2020",
       "type": "game"

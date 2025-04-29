@@ -19,11 +19,11 @@
       "position": "Programmeur de gameplay",
       "startDate": "2018",
       "highlights": [
-        "Sortie de Battle Shapers sous Unity",
-        "Développement de mécaniques de personnage, systèmes de caméra et contrôles, mécaniques de gameplay roguelike modulaires",
+        "Sortie de Battle Shapers sous Unity, du prototypage initial à la sortie finale sur Steam",
+        "Développement de systèmes de personnage, caméra et contrôles, mécaniques de gameplay roguelike modulaires",
         "Conception, implémentation et maintenance de plusieurs outils dans et hors moteur pour diverses chaînes de production (Art, Animation, Wwise, Dialogue, Localisation, Versionnement)",
         "Implémentation du multijoueur en ligne dans Unreal Engine ainsi que du Gameplay Ability System et des modes de mouvement personnalisés",
-        "Gestion de flux de travail Git complexes, y compris les stratégies de branchement, le développement de fonctionnalités et la collaboration d'équipe"
+        "Gestion des flux de travail Git pour permettre les stratégies de branchement, le développement de fonctionnalités et la collaboration d'équipe"
       ]
     },
     {
@@ -74,7 +74,8 @@
         "Godot",
         "GDScript",
         "3Cs",
-        "Multijoueur en réseau"
+        "Multijoueur en réseau",
+        "Git"
       ]
     },
     {
